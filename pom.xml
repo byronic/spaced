@@ -22,17 +22,21 @@
 	<parent>
 		<groupId>org.infrastructurebuilder</groupId>
 		<artifactId>ibparent</artifactId>
-		<version>41</version>
+		<version>53</version>
 	</parent>
 	<groupId>org.nerdsofprey</groupId>
 	<artifactId>spaced</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spaced</name>
-	<description>Space RPG a la kingdom of loathing</description>
-	<properties>
-		<java.version>11</java.version>
-	</properties>
+	<description>Originally Space RPG a la kingdom of loathing but now a Make Spring Work project</description>
+
+
+  <properties>
+    <test.coverage.percentage.required>37</test.coverage.percentage.required>
+  </properties>
+
 	<dependencyManagement>
+
      <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -63,15 +67,22 @@
 			<version>8.0.22</version>
 			<scope>runtime</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.2.3</version>
-		</dependency>
+<dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.30</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
