@@ -1,4 +1,4 @@
-## I can't make Spring Boot 2 just-work out-of-the-box.
+## I can't make Spring Boot 3 just-work out-of-the-box.
 
 Now you (kind of) can. Have you ever been in a position where a 404 is the happiest thing you've seen all day? This project is for you.
 
